@@ -33,7 +33,7 @@ def login(request):
         password = request_json.get("password", "")
         
         if email == "" or password == "":
-            return("invalid-request", 400, header)
+            return("invalid-request", 400, headers)
         
         collection_name = "users"
         db = firestore.Client()
